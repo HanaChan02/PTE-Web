@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102a43">
+  <title>FluentPath — PTE Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="FluentPath home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>fluent<span class="brand-light">path</span></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span> Dashboard</button>
+        <button class="nav-item" data-view="practice"><span class="nav-icon">◉</span> Practice</button>
+        <button class="nav-item" data-view="mock"><span class="nav-icon">▤</span> Mock tests <span class="nav-pill">NEW</span></button>
+        <button class="nav-item" data-view="progress"><span class="nav-icon">↗</span> My progress</button>
+      </nav>
+      <div class="side-label tools-label">YOUR PREPARATION</div>
+      <div class="side-progress">
+        <div class="side-progress-top"><span>Weekly goal</span><strong>3 / 5 hrs</strong></div>
+        <div class="progress-track"><span style="width:60%"></span></div>
+        <p>You're making good progress. Keep it up!</p>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✦</div><strong>Need a study plan?</strong><p>Build a routine that works for you.</p><button id="planBtn">Explore tips <span>→</span></button></div>
+        <button class="profile-mini"><span class="avatar">IS</span><span class="profile-name"><strong>Guest learner</strong><small>Free account</small></span><span class="dots">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="crumb">Dashboard</strong></div>
+        <div class="top-actions"><button class="icon-button" title="Notifications">♧<i></i></button><span class="top-divider"></span><span class="avatar top-avatar">IS</span></div>
+      </header>
+
+      <section class="view active" id="dashboard">
+        <div class="welcome-row">
+          <div><div class="eyebrow"><span class="spark">✦</span> YOUR PTE JOURNEY</div><h1>Make every practice <em>count.</em></h1><p class="subheading">A little progress each day adds up. Ready for today's session?</p></div>
+          <div class="date-chip"><span>◷</span> <span id="today">Your study space</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-content"><span class="hero-kicker">PICK UP WHERE YOU LEFT OFF</span><h2>Your next score<br>starts <span>right here.</span></h2><p>Build confidence with focused practice and realistic mock tests.</p><button class="primary-btn" data-go="practice">Continue practicing <span>→</span></button></div>
+          <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-card card-back"><span class="mini-line"></span><span class="mini-line short"></span><span class="mini-chart"><i></i><i></i><i></i><i></i><i></i></span></div><div class="art-card card-front"><span class="art-check">✓</span><strong>You're improving</strong><small>One step at a time</small><div class="art-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="art-spark">✦</div><div class="art-dot"></div></div>
+        </div>
+        <div class="section-heading"><div><h2>Your learning overview</h2><p>Keep an eye on your preparation.</p></div><button class="text-btn" data-go="progress">View progress <span>→</span></button></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon purple">◷</span><span class="stat-caption">THIS WEEK</span></div><div class="stat-value">3.0 <small>hrs</small></div><div class="stat-foot"><span class="positive">↑ 20%</span> <span>vs. last week</span></div><div class="tiny-bars"><i style="height:35%"></i><i style="height:58%"></i><i style="height:43%"></i><i style="height:75%"></i><i style="height:53%"></i><i style="height:88%"></i><i style="height:65%"></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon mint">✓</span><span class="stat-caption">COMPLETED</span></div><div class="stat-value">12 <small>tasks</small></div><div class="stat-foot"><span class="muted">Practice activities</span></div><div class="stat-bottom-line"><span style="width:72%"></span></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon amber">◎</span><span class="stat-caption">PRACTICE STREAK</span></div><div class="stat-value">4 <small>days</small></div><div class="stat-foot"><span class="positive">You're on a roll!</span></div><div class="streak-dots"><i class="done">M</i><i class="done">T</i><i class="done">W</i><i class="done">T</i><i>F</i><i>S</i><i>S</i></div></article>
+          <article class="stat-card score-stat"><div class="stat-top"><span class="stat-icon blue">✧</span><span class="stat-caption">TARGET SCORE</span></div><div class="score-flex"><div class="stat-value">79 <small>/ 90</small></div><div class="score-ring"><span>87%</span></div></div><div class="stat-foot"><span class="muted">Your personal goal</span></div></article>
+        </div>
+        <div class="bottom-grid">
+          <div class="panel skills-panel"><div class="panel-heading"><div><h2>Practice by skill</h2><p>Choose a skill to focus on today.</p></div><button class="more-btn" aria-label="More options">•••</button></div><div class="skill-list">
+            <button class="skill-row" data-skill="Speaking"><span class="skill-symbol speaking">◖</span><span class="skill-info"><strong>Speaking</strong><small>Fluency & pronunciation</small></span><span class="skill-count">6 tasks</span><span class="row-arrow">↗</span></button>
+            <button class="skill-row" data-skill="Writing"><span class="skill-symbol writing">✎</span><span class="skill-info"><strong>Writing</strong><small>Structure & vocabulary</small></span><span class="skill-count">4 tasks</span><span class="row-arrow">↗</span></button>
+            <button class="skill-row" data-skill="Reading"><span class="skill-symbol reading">▤</span><span class="skill-info"><strong>Reading</strong><small>Comprehension & speed</small></span><span class="skill-count">8 tasks</span><span class="row-arrow">↗</span></button>
+            <button class="skill-row" data-skill="Listening"><span class="skill-symbol listening">♫</span><span class="skill-info"><strong>Listening</strong><small>Focus & understanding</small></span><span class="skill-count">5 tasks</span><span class="row-arrow">↗</span></button>
+          </div></div>
+          <div class="panel activity-panel"><div class="panel-heading"><div><h2>Quick start</h2><p>Jump into a focused session.</p></div></div><button class="quick-card" data-go="practice"><span class="quick-icon violet">✦</span><span><strong>Daily practice</strong><small>10–15 min · Mixed skills</small></span><span class="quick-arrow">→</span></button><button class="quick-card" data-go="mock"><span class="quick-icon peach">▤</span><span><strong>Full mock test</strong><small>Exam-style experience</small></span><span class="quick-arrow">→</span></button><div class="quote-box"><span>“</span><p>Consistency is more important than perfection.</p><small>YOUR DAILY REMINDER</small></div></div>
+        </div>
+        <footer>FluentPath is an independent study project and is not affiliated with Pearson.</footer>
+      </section>
+
+      <section class="view" id="practice">
+        <div class="page-heading"><div class="eyebrow">BUILD YOUR SKILLS</div><h1>Practice <em>your way.</em></h1><p class="subheading">Choose a skill and work through focused activities at your own pace.</p></div>
+        <div class="filter-row"><button class="filter active" data-filter="All">All skills <span>23</span></button><button class="filter" data-filter="Speaking">Speaking</button><button class="filter" data-filter="Writing">Writing</button><button class="filter" data-filter="Reading">Reading</button><button class="filter" data-filter="Listening">Listening</button></div>
+        <div class="practice-grid" id="practiceGrid">
+          <article class="practice-card" data-category="Speaking"><div class="practice-card-top"><span class="skill-symbol speaking">◖</span><span class="level">BEGINNER</span></div><h3>Read Aloud</h3><p>Read a passage clearly and practice your pronunciation and fluency.</p><div class="card-meta"><span>◷ 5–8 min</span><span>Speaking</span></div><button class="outline-btn start-task" data-task="Read Aloud">Start practice <span>→</span></button></article>
+          <article class="practice-card" data-category="Speaking"><div class="practice-card-top"><span class="skill-symbol speaking">◖</span><span class="level intermediate">INTERMEDIATE</span></div><h3>Describe Image</h3><p>Organize key details into a clear, coherent spoken response.</p><div class="card-meta"><span>◷ 5–10 min</span><span>Speaking</span></div><button class="outline-btn start-task" data-task="Describe Image">Start practice <span>→</span></button></article>
+          <article class="practice-card" data-category="Writing"><div class="practice-card-top"><span class="skill-symbol writing">✎</span><span class="level intermediate">INTERMEDIATE</span></div><h3>Summarize Written Text</h3><p>Condense a passage into one clear, grammatically correct sentence.</p><div class="card-meta"><span>◷ 10 min</span><span>Writing</span></div><button class="outline-btn start-task" data-task="Summarize Written Text">Start practice <span>→</span></button></article>
+          <article class="practice-card" data-category="Writing"><div class="practice-card-top"><span class="skill-symbol writing">✎</span><span class="level">BEGINNER</span></div><h3>Write Essay</h3><p>Practice planning and writing a structured response to a prompt.</p><div class="card-meta"><span>◷ 20 min</span><span>Writing</span></div><button class="outline-btn start-task" data-task="Write Essay">Start practice <span>→</span></button></article>
+          <article class="practice-card" data-category="Reading"><div class="practice-card-top"><span class="skill-symbol reading">▤</span><span class="level">BEGINNER</span></div><h3>Multiple Choice</h3><p>Read a passage and identify the answer supported by the text.</p><div class="card-meta"><span>◷ 5 min</span><span>Reading</span></div><button class="outline-btn start-task" data-task="Reading Multiple Choice">Start practice <span>→</span></button></article>
+          <article class="practice-card" data-category="Reading"><div class="practice-card-top"><span class="skill-symbol reading">▤</span><span class="level intermediate">INTERMEDIATE</span></div><h3>Re-order Paragraphs</h3><p>Arrange sentences into a logical and coherent paragraph.</p><div class="card-meta"><span>◷ 5–8 min</span><span>Reading</span></div><button class="outline-btn start-task" data-task="Re-order Paragraphs">Start practice <span>→</span></button></article>
+          <article class="practice-card" data-category="Listening"><div class="practice-card-top"><span class="skill-symbol listening">♫</span><span class="level">BEGINNER</span></div><h3>Listening MCQ</h3><p>Listen carefully and select the answer that best fits the audio.</p><div class="card-meta"><span>◷ 5 min</span><span>Listening</span></div><button class="outline-btn start-task" data-task="Listening Multiple Choice">Start practice <span>→</span></button></article>
+          <article class="practice-card" data-category="Listening"><div class="practice-card-top"><span class="skill-symbol listening">♫</span><span class="level intermediate">INTERMEDIATE</span></div><h3>Summarize Spoken Text</h3><p>Capture the main ideas and supporting details from a recording.</p><div class="card-meta"><span>◷ 10 min</span><span>Listening</span></div><button class="outline-btn start-task" data-task="Summarize Spoken Text">Start practice <span>→</span></button></article>
+        </div>
+      </section>
+
+      <section class="view" id="mock">
+        <div class="page-heading"><div class="eyebrow">EXAM SIMULATION</div><h1>Mock tests, <em>made simple.</em></h1><p class="subheading">Get familiar with the test experience in a focused, low-pressure environment.</p></div>
+        <div class="mock-banner"><div><span class="hero-kicker">YOUR NEXT MILESTONE</span><h2>Practice like it's<br><span>test day.</span></h2><p>Choose a test format and get started when you're ready.</p></div><div class="mock-graphic"><div class="mock-sheet"><div></div><div></div><div></div><div></div><div></div><b>✓</b></div></div></div>
+        <div class="section-heading"><div><h2>Choose your test</h2><p>These are frontend previews; test content and scoring can be connected later.</p></div></div>
+        <div class="mock-grid"><article class="mock-card"><span class="mock-tag">FULL LENGTH</span><div class="mock-card-icon">▤</div><h3>Full Mock Test</h3><p>A complete practice experience covering all four skills.</p><div class="mock-details"><span>◷ Approx. 2 hrs</span><span>◎ All skills</span></div><button class="primary-btn mock-start" data-mock="Full Mock Test">Set up test <span>→</span></button></article><article class="mock-card"><span class="mock-tag purple-tag">SHORT SESSION</span><div class="mock-card-icon lilac">◉</div><h3>Mini Mock Test</h3><p>A shorter mixed-skills session to fit into your day.</p><div class="mock-details"><span>◷ 30 min</span><span>◎ Mixed skills</span></div><button class="outline-btn mock-start" data-mock="Mini Mock Test">Set up test <span>→</span></button></article><article class="mock-card"><span class="mock-tag green-tag">FOCUSED</span><div class="mock-card-icon green-icon">✧</div><h3>Skill Mock Test</h3><p>Focus on one skill and build confidence in your weak areas.</p><div class="mock-details"><span>◷ 20–40 min</span><span>◎ One skill</span></div><button class="outline-btn mock-start" data-mock="Skill Mock Test">Set up test <span>→</span></button></article></div>
+      </section>
+
+      <section class="view" id="progress">
+        <div class="page-heading"><div class="eyebrow">YOUR JOURNEY SO FAR</div><h1>Progress that <em>adds up.</em></h1><p class="subheading">A snapshot of your learning activity. Sample figures are shown for this frontend preview.</p></div>
+        <div class="progress-overview"><div class="progress-big"><span class="stat-caption">PRACTICE TIME</span><strong>3.0 <small>hours</small></strong><span class="positive">↑ 20% vs. last week</span></div><div class="progress-big"><span class="stat-caption">TASKS COMPLETED</span><strong>12 <small>tasks</small></strong><span class="muted">Across all skills</span></div><div class="progress-big"><span class="stat-caption">CURRENT STREAK</span><strong>4 <small>days</small></strong><span class="muted">Keep your momentum</span></div></div>
+        <div class="panel progress-note"><h2>Your progress will live here</h2><p>Once accounts and a database are connected, this page can show your real practice history, scores and skill trends.</p><button class="primary-btn" data-go="practice">Continue practicing <span>→</span></button></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><span class="modal-symbol">✦</span><h2 id="modalTitle">Coming up next</h2><p id="modalText">This part of the practice experience is ready for content and scoring to be connected.</p><button class="primary-btn" id="modalOkay">Got it</button></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
